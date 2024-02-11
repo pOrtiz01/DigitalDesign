@@ -1,0 +1,1114 @@
+Analysis & Synthesis report for computerLab
+Thu Feb 08 10:25:59 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: register:R0
+ 13. Parameter Settings for User Entity Instance: register:R1
+ 14. Parameter Settings for User Entity Instance: register:R2
+ 15. Parameter Settings for User Entity Instance: register:R3
+ 16. Parameter Settings for User Entity Instance: register:R4
+ 17. Parameter Settings for User Entity Instance: register:R5
+ 18. Parameter Settings for User Entity Instance: register:R6
+ 19. Parameter Settings for User Entity Instance: register:R7
+ 20. Parameter Settings for User Entity Instance: register:R8
+ 21. Parameter Settings for User Entity Instance: register:R9
+ 22. Parameter Settings for User Entity Instance: register:R10
+ 23. Parameter Settings for User Entity Instance: register:R11
+ 24. Parameter Settings for User Entity Instance: register:R12
+ 25. Parameter Settings for User Entity Instance: register:R13
+ 26. Parameter Settings for User Entity Instance: register:R14
+ 27. Parameter Settings for User Entity Instance: register:R15
+ 28. Parameter Settings for User Entity Instance: register:RHI
+ 29. Parameter Settings for User Entity Instance: register:RLO
+ 30. Parameter Settings for User Entity Instance: register:RY
+ 31. Parameter Settings for User Entity Instance: register:RZHI
+ 32. Parameter Settings for User Entity Instance: register:RZLO
+ 33. Parameter Settings for User Entity Instance: register:RMAR
+ 34. Port Connectivity Checks: "bus:bus"
+ 35. Port Connectivity Checks: "register:RMAR"
+ 36. Port Connectivity Checks: "register:RZLO"
+ 37. Port Connectivity Checks: "register:RZHI"
+ 38. Port Connectivity Checks: "register:RLO"
+ 39. Port Connectivity Checks: "register:RHI"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Feb 08 10:25:59 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; computerLab                                 ;
+; Top-level Entity Name           ; datapath                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 416                                         ;
+; Total pins                      ; 303                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; datapath           ; computerLab        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; register.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/labComputer/register.v ;         ;
+; bus.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/labComputer/bus.v      ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/labComputer/datapath.v ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/labComputer/alu.v      ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 277         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 184         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 130         ;
+;     -- 5 input functions                    ; 1           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 53          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 416         ;
+;                                             ;             ;
+; I/O pins                                    ; 303         ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clear~input ;
+; Maximum fan-out                             ; 429         ;
+; Total fan-out                               ; 2926        ;
+; Average fan-out                             ; 2.43        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; |datapath                  ; 184 (0)             ; 416 (0)                   ; 0                 ; 0          ; 303  ; 0            ; |datapath              ; datapath    ; work         ;
+;    |bus:bus|               ; 171 (171)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|bus:bus      ; bus         ; work         ;
+;    |register:R0|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R0  ; register    ; work         ;
+;    |register:R10|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R10 ; register    ; work         ;
+;    |register:R11|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R11 ; register    ; work         ;
+;    |register:R12|          ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R12 ; register    ; work         ;
+;    |register:R1|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R1  ; register    ; work         ;
+;    |register:R2|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R2  ; register    ; work         ;
+;    |register:R3|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R3  ; register    ; work         ;
+;    |register:R4|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R4  ; register    ; work         ;
+;    |register:R5|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R5  ; register    ; work         ;
+;    |register:R6|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R6  ; register    ; work         ;
+;    |register:R7|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R7  ; register    ; work         ;
+;    |register:R8|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R8  ; register    ; work         ;
+;    |register:R9|           ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register:R9  ; register    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; bus:bus|q[0]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[1]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[2]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[3]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[4]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[5]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[6]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[7]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[8]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[9]                                        ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[10]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[11]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[12]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[13]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[14]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[15]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[16]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[17]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[18]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[19]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[20]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[21]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[22]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[23]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[24]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[25]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[26]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[27]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[28]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[29]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[30]                                       ; bus:bus|q[31]       ; yes                    ;
+; bus:bus|q[31]                                       ; bus:bus|q[31]       ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; register:R15|q[0..31]                  ; Lost fanout        ;
+; register:R14|q[0..31]                  ; Lost fanout        ;
+; register:R13|q[0..31]                  ; Lost fanout        ;
+; Total Number of Removed Registers = 96 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 416   ;
+; Number of registers using Synchronous Clear  ; 416   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 416   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R0|q[0]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R1|q[25]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R2|q[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R3|q[17]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R4|q[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R5|q[16]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R6|q[17]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R7|q[2]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R8|q[18]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R9|q[19]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R10|q[11] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R11|q[19] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |datapath|register:R12|q[19] ;
+; 13:1               ; 32 bits   ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; No         ; |datapath|bus:bus|q[6]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R0            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R1            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R2            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R3            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R4            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R5            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R6            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R7            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R8            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R9            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R10           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R11           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R12           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R13           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R14           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R15           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RHI           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RLO           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RY            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RZHI          ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RZLO          ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:RMAR          ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bus:bus"                                                                                                                                                      ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxInHI   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInHI[31..1]" will be connected to GND.   ;
+; BusMuxInLO   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInLO[31..1]" will be connected to GND.   ;
+; BusMuxInRZLo ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInRZLo[31..1]" will be connected to GND. ;
+; BusMuxInY    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInY[31..1]" will be connected to GND.    ;
+; BusMuxInMDR  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInMDR[31..1]" will be connected to GND.  ;
+; BusMuxInIN   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInIN[31..1]" will be connected to GND.   ;
+; BusMuxInC    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxInC[31..1]" will be connected to GND.    ;
++--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:RMAR"                                                                                                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "BusMuxIn[31..1]" have no fanouts ;
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:RZLO"                                                                                                                                           ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                             ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxOut ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxOut[31..1]" will be connected to GND. ;
+; BusMuxIn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                 ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:RZHI"                                                                                                                                           ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                             ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxOut ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxOut[31..1]" will be connected to GND. ;
+; BusMuxIn  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                 ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:RLO"                                                                                                                     ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "BusMuxIn[31..1]" have no fanouts ;
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:RHI"                                                                                                                     ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "BusMuxIn[31..1]" have no fanouts ;
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 416                         ;
+;     ENA SCLR          ; 416                         ;
+; arriav_lcell_comb     ; 184                         ;
+;     normal            ; 184                         ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 36                          ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 130                         ;
+; boundary_port         ; 303                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.38                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Feb 08 10:25:39 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off computerLab -c computerLab
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register File: C:/intelFPGA_lite/18.1/labComputer/register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: adder File: C:/intelFPGA_lite/18.1/labComputer/adder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu File: C:/intelFPGA_lite/18.1/labComputer/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
+    Info (12023): Found entity 1: ALU_tb File: C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(39): created implicit net for "BusMuxInRHi" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(40): created implicit net for "BusMuxInRLo" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(44): created implicit net for "RYin" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(46): created implicit net for "RZHiData" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(47): created implicit net for "RZLoData" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(49): created implicit net for "BusMuxInRMAR" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "BusMuxInRHI" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "BusMuxInRLO" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "BusMuxInRIR" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "BusMuxInRY" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RHIout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RLOout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RPCout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RIRout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RYout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RZHiout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RZLoout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(52): created implicit net for "RMDRout" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at ALU_tb.v(16): created implicit net for "RYIn" File: C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at ALU_tb.v(16): created implicit net for "RZLoOut" File: C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v Line: 16
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 22
+Info (12128): Elaborating entity "bus" for hierarchy "bus:bus" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 52
+Warning (10240): Verilog HDL Always Construct warning at bus.v(13): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 13
+Info (10041): Inferred latch for "q[0]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[1]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[2]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[3]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[4]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[5]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[6]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[7]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[8]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[9]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[10]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[11]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[12]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[13]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[14]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[15]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[16]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[17]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[18]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[19]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[20]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[21]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[22]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[23]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[24]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[25]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[26]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[27]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[28]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[29]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[30]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (10041): Inferred latch for "q[31]" at bus.v(34) File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU_instance" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 54
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch bus:bus|q[0] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[1] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[2] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[3] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[4] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[5] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[6] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[7] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[8] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[9] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[10] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[11] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[12] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[13] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[14] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[15] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[16] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[17] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[18] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[19] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[20] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[21] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[22] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[23] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[24] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[25] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[26] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[27] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[28] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[29] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[30] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Warning (13012): Latch bus:bus|q[31] has unsafe behavior File: C:/intelFPGA_lite/18.1/labComputer/bus.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal R14out File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 96 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 243 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "opcode[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "opcode[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "opcode[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "opcode[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "R13in" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 5
+    Warning (15610): No output dependent on input pin "R14in" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 5
+    Warning (15610): No output dependent on input pin "R15in" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 5
+    Warning (15610): No output dependent on input pin "R0out" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+    Warning (15610): No output dependent on input pin "R1out" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+    Warning (15610): No output dependent on input pin "R2out" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 6
+    Warning (15610): No output dependent on input pin "RPCIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RIRIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RZHiIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RZLoIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RHiIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RLoIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RMDRIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RMARIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RYIn" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "RPCOut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RPCOut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RIROut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZHiOut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RZLoOut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RHiOut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RLoOut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "RMDROut[0]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[1]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[2]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[3]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[4]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[5]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[6]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[7]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[8]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[9]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[10]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[11]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[12]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[13]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[14]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[15]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[16]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[17]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[18]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[19]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[20]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[21]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[22]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[23]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[24]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[25]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[26]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[27]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[28]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[29]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[30]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "RMDROut[31]" File: C:/intelFPGA_lite/18.1/labComputer/datapath.v Line: 10
+Info (21057): Implemented 903 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 271 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 600 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 331 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Thu Feb 08 10:25:59 2024
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:32
+
+

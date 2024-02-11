@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Feb 08 10:25:59 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : computerLab
+Top-level Entity Name : datapath
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 416
+Total pins : 303
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

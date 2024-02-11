@@ -1,0 +1,18 @@
+module alu(
+	input [31:0]Y, input [31:0]BusMuxOut,
+	input [3:0]op,
+	output wire [31:0]RZHi,output wire [31:0]RZLo
+
+);
+
+always@(Y or BusMuxOut)
+	begin
+		case(op)
+		4'b0000: //add
+			begin
+				
+			end
+		
+	end
+
+

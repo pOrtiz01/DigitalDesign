@@ -1,0 +1,151 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do computerLab_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer {C:/intelFPGA_lite/18.1/labComputer/register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:36 on Feb 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/labComputer" C:/intelFPGA_lite/18.1/labComputer/register.v 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 10:21:36 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer {C:/intelFPGA_lite/18.1/labComputer/bus.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:36 on Feb 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/labComputer" C:/intelFPGA_lite/18.1/labComputer/bus.v 
+# -- Compiling module bus
+# 
+# Top level modules:
+# 	bus
+# End time: 10:21:36 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer {C:/intelFPGA_lite/18.1/labComputer/datapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:36 on Feb 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/labComputer" C:/intelFPGA_lite/18.1/labComputer/datapath.v 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 10:21:36 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer {C:/intelFPGA_lite/18.1/labComputer/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:36 on Feb 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/labComputer" C:/intelFPGA_lite/18.1/labComputer/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 10:21:36 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer {C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:36 on Feb 08,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/labComputer" C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v 
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 10:21:36 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
+# Start time: 10:21:37 on Feb 08,2024
+# Loading work.ALU_tb
+# Loading work.datapath
+# Loading work.register
+# Loading work.bus
+# Loading work.alu
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Too few port connections. Expected 52, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP File: C:/intelFPGA_lite/18.1/labComputer/datapath.v
+# ** Error (suppressible): (vsim-3053) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): Illegal output or inout port connection for port 'BusMuxOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP File: C:/intelFPGA_lite/18.1/labComputer/datapath.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R0in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R1in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R2in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R3in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R4in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R5in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R6in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R7in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R8in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R9in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R10in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R11in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R12in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R13in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R14in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R15in'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R0out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R1out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R2out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R3out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R4out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R5out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R6out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R7out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R8out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R9out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R10out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R11out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R12out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R13out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R14out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'R15out'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RPCIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RIRIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RZHiIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RHiIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RLoIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RMDRIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RMARIn'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RPCOut'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RIROut'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RZHiOut'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RHiOut'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RLoOut'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v(14): [TFMPC] - Missing connection for port 'RMDROut'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(39): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/RHI File: C:/intelFPGA_lite/18.1/labComputer/register.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(40): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/RLO File: C:/intelFPGA_lite/18.1/labComputer/register.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(46): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxOut'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/register.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/RZHI File: C:/intelFPGA_lite/18.1/labComputer/register.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(47): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxOut'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/register.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/RZLO File: C:/intelFPGA_lite/18.1/labComputer/register.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(49): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/RMAR File: C:/intelFPGA_lite/18.1/labComputer/register.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInHI'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInLO'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInRZLo'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInY'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInMDR'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInIN'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/labComputer/datapath.v(52): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxInC'. The port definition is at: C:/intelFPGA_lite/18.1/labComputer/bus.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/DP/bus File: C:/intelFPGA_lite/18.1/labComputer/bus.v
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./computerLab_run_msim_rtl_verilog.do PAUSED at line 15
+# End time: 10:26:50 on Feb 08,2024, Elapsed time: 0:05:13
+# Errors: 1, Warnings: 58

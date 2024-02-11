@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/labComputer/simulation/modelsim
+vALU_tb
+Z1 !s110 1706802964
+!i10b 1
+!s100 i01@6ajPHhM[5[EVoeHSH2
+I9:zUR45:1Z?:I:mWbaFbz1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1706802807
+8C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v
+FC:/intelFPGA_lite/18.1/labComputer/ALU_tb.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1706802964.000000
+!s107 C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer
+Z6 tCvgOpt 0
+n@a@l@u_tb
+vdatapath
+R1
+!i10b 1
+!s100 en8KadU5QT9m@21Q4N<;92
+ISHGi9S:]Oh>]7kmQB1X`@2
+R2
+R0
+w1706802941
+8computerLab.vo
+FcomputerLab.vo
+L0 31
+R3
+r1
+!s85 0
+31
+R4
+!s107 computerLab.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|computerLab.vo|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+.
+R6

@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/labComputer/simulation/modelsim
+valu
+Z1 !s110 1707405696
+!i10b 1
+!s100 YUBNIPn2Cea_PIR=IU41A0
+In_N4TC0PYoXN@o2[D?SOJ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1707405551
+8C:/intelFPGA_lite/18.1/labComputer/alu.v
+FC:/intelFPGA_lite/18.1/labComputer/alu.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1707405696.000000
+!s107 C:/intelFPGA_lite/18.1/labComputer/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/alu.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/labComputer
+Z7 tCvgOpt 0
+vALU_tb
+R1
+!i10b 1
+!s100 Ok>nMCDNO>LgYY6ieFC9d3
+IMjhLeRmcj^@?f[?bh7[DS1
+R2
+R0
+w1707405504
+8C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v
+FC:/intelFPGA_lite/18.1/labComputer/ALU_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/ALU_tb.v|
+!i113 1
+R5
+R6
+R7
+n@a@l@u_tb
+vbus
+R1
+!i10b 1
+!s100 >Meg6dCM@^mLc9h@mcnib1
+I5[VUI@8`D[fbTKGE:1XYZ2
+R2
+R0
+w1707000892
+8C:/intelFPGA_lite/18.1/labComputer/bus.v
+FC:/intelFPGA_lite/18.1/labComputer/bus.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/labComputer/bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/bus.v|
+!i113 1
+R5
+R6
+R7
+vdatapath
+R1
+!i10b 1
+!s100 TenmnMRAldA>AOaU1MLX<1
+IFAa973h3=d1BX^<I>iIM01
+R2
+R0
+w1707405536
+8C:/intelFPGA_lite/18.1/labComputer/datapath.v
+FC:/intelFPGA_lite/18.1/labComputer/datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/labComputer/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/datapath.v|
+!i113 1
+R5
+R6
+R7
+vregister
+R1
+!i10b 1
+!s100 Dmdb<a[kLzA][[ehOiE=S1
+I>QF]MV3Ij[KmD9J4?I>b_3
+R2
+R0
+w1706798030
+8C:/intelFPGA_lite/18.1/labComputer/register.v
+FC:/intelFPGA_lite/18.1/labComputer/register.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/labComputer/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/labComputer|C:/intelFPGA_lite/18.1/labComputer/register.v|
+!i113 1
+R5
+R6
+R7
